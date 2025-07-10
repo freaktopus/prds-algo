@@ -1,0 +1,22 @@
+[package]
+name="prds-algo"
+version="0.1.0"
+edition="2021"
+
+[workspace]
+members = ["disk-schedule","page-replace"]
+resolver = "2"
+
+[[bin]]
+name = "page"
+path = "page-replace/src/main.rs"
+
+[[bin]]
+name = "disk"
+path = "disk-schedule/src/main.rs"
+
+[workspace.dependencies]
+
+[dependencies]
+page-replace = { path = "./page-replace" }
+disk-schedule = { path = "./disk-schedule" }
